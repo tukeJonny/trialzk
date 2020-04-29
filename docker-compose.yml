@@ -1,0 +1,11 @@
+version: '3'
+# zookeeper -> master -> workers -> client の起動順
+services:
+  zk:
+    image: zookeeper:latest
+    restart: always
+    ports:
+      - 2181:2181
+      - 2888:2888
+      - 3888:3888
+      - 8080:8080
